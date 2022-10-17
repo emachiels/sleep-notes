@@ -1,0 +1,33 @@
+{
+    "include": [
+        "**/*"
+    ],
+    "compilerOptions": {
+        "target": "es2020",
+        "module": "es2020",
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext",
+            "es6"
+        ],
+        "jsx": "react-jsx",
+        "skipLibCheck": true,
+        "isolatedModules": true,
+        "strict": true,
+        "strictBindCallApply": true,
+        "noUnusedLocals": false,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "useDefineForClassFields": true,
+        "baseUrl": "./resources/js"
+    }
+}

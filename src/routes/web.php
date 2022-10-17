@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Routing\Router;
+use Illuminate\Routing\RouteRegistrar;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+/** @var Router|RouteRegistrar $router */
+$router = resolve(Router::class);
+
+$router->middleware('guest')->group(static function(Router|RouteRegistrar $router) {
+    //
+});
+
+$router->middleware('auth')->group(static function(Router|RouteRegistrar $router) {
+    //
 });
