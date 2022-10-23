@@ -13,14 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('failed_jobs', function (Blueprint $table) {
-            $table->ulid('id');
-            $table->string('uuid')->unique();
-            $table->text('connection');
-            $table->text('queue');
-            $table->longText('payload');
-            $table->longText('exception');
-            $table->timestamp('failed_at')->useCurrent();
+        Schema::create('sleep_moment_influences', function (Blueprint $table) {
+            $table->ulid('id')->primary();
+            $table->foreignUlid('sleep_moment_id')->constrained();
+            $table->foreignUlid('influence_id')->constrained();
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -31,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('failed_jobs');
+        Schema::dropIfExists('sleep_moment_influences');
     }
 };

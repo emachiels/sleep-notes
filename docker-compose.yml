@@ -36,10 +36,10 @@ services:
     restart: unless-stopped
     volumes:
       - ./docker/config/mysql/my.cnf:/etc/mysql/my.cnf
-      - db:/var/lib/mysql
+      - sleep-notes-db:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: "db"
-      MYSQL_DATABASE: "cube"
+      MYSQL_DATABASE: "sleep-notes"
       MYSQL_USER: "db"
       MYSQL_PASSWORD: "db"
     ports:
@@ -48,7 +48,7 @@ services:
       - app-network
 
 volumes:
-  db:
+  sleep-notes-db:
 
 networks:
   app-network:
