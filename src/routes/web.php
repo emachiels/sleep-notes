@@ -19,7 +19,8 @@ use Illuminate\Support\Facades\Route;
 $router = resolve(Router::class);
 
 $router->middleware('guest')->group(static function(Router|RouteRegistrar $router) {
-    //
+    $router->redirect('/', '/login');
+    $router->get('login', [\App\Http\Controllers\AuthController::class, 'showLogin'])->name('auth.login');
 });
 
 $router->middleware('auth')->group(static function(Router|RouteRegistrar $router) {

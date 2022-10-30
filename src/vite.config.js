@@ -1,14 +1,12 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import { svelte } from "@sveltejs/vite-plugin-svelte";
 
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js'],
+            input: ['resources/css/app.css', 'resources/js/app.tsx'],
             refresh: true,
-        }),
-        svelte()
+        })
     ],
     build: {
         target: 'es2020'
@@ -20,7 +18,7 @@ export default defineConfig({
     optimizeDeps: {
         include: [
             '@inertiajs/inertia',
-            '@inertiajs/inertia-svelte'
+            '@inertiajs/inertia-react'
         ]
     }
 });

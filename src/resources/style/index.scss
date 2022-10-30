@@ -1,0 +1,17 @@
+@use "reset";
+@use "variables";
+@use "typography";
+
+@tailwind utilities;
+
+html {
+    font-size: 12px;
+}
+
+body {
+    background-color: variables.$global-background-color;
+    font: {
+        family: 'Montserrat', Verdana, sans-serif;
+    }
+    color: variables.$global-font-color;
+}

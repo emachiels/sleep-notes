@@ -1,0 +1,26 @@
+@use "../../../style/variables";
+
+.button {
+    display: inline-flex;
+    padding: 1rem;
+    border-radius: variables.$global-border-radius;
+    cursor: pointer;
+    font-weight: 600;
+    border: solid 1px transparent;
+
+    &--primary {
+        background: variables.$primary-color;
+        border-color: variables.$primary-color;
+        color: variables.$global-font-color;
+
+        &:hover {
+            background: darken(variables.$primary-color, 5%);
+            border-color: darken(variables.$primary-color, 5%);
+        }
+
+        &:active {
+            background: darken(variables.$primary-color, 7.5%);
+            border-color: darken(variables.$primary-color, 7.5%);
+        }
+    }
+}

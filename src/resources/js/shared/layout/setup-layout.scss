@@ -1,0 +1,21 @@
+@use "../../../style/variables";
+
+.setup-layout {
+    display: flex;
+    flex-direction: row;
+
+    .setup-layout-sidebar {
+        width: 500px;
+        height: 100vh;
+        background: darken(variables.$global-background-color, 2.5%);
+    }
+
+    .setup-layout-content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 2rem;
+    }
+}

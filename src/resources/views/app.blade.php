@@ -7,6 +7,7 @@
 </head>
 <body>
 @inertia
-@vite(['resources/css/app.css', 'resources/js/app.js'])
+@routes
+@vite(['resources/css/app.css', 'resources/js/app.tsx'])
 </body>
 </html>

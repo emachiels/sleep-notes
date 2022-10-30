@@ -1,0 +1,29 @@
+@use "../../../style/variables";
+
+.form-control-container {
+    background: rgba(255, 255, 255, .025);
+    display: flex;
+    width: 100%;
+    border-radius: variables.$global-border-radius;
+    border: solid 1px rgba(255, 255, 255, .1);
+
+    .form-control {
+        padding: 1rem;
+        flex: 1;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: inherit;
+    }
+
+    &:hover {
+        border-color: variables.$primary-color;
+        background: rgba(255, 255, 255, .03);
+    }
+
+    &:focus, &--focus {
+        border-color: variables.$primary-color;
+        background: rgba(255, 255, 255, .03);
+        box-shadow: 0 0 0 2px transparentize(variables.$primary-color, .5);
+    }
+}
